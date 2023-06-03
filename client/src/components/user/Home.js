@@ -40,7 +40,7 @@ function Home(props) {
               </li>
             </ul>
           </div>
-          <a href="#" class="btn-download">
+          <a href="https://drive.google.com/uc?export=download&id=12WUgwJJRKe-q-rqbAQnGWe1UpFj0GTcs" download="GoProUserGuide.pdf" class="btn-download">
             <i class="bx bxs-cloud-download"></i>
             <span class="text">Download PDF</span>
           </a>

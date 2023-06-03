@@ -78,8 +78,8 @@ function Admin() {
       showCancelButton: true,
       confirmButtonColor: "#57c496",
       cancelButtonColor: "#fd7238",
-      confirmButtonText: "oui",
-      cancelButtonText: "non",
+      confirmButtonText: "Yes",
+      cancelButtonText: "No",
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem("token");

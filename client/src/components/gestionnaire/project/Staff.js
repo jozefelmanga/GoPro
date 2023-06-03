@@ -50,8 +50,8 @@ function Staff(props,ref) {
           }, {}),
           showCancelButton: true,
           confirmButtonColor: "#57c496",
-          confirmButtonText: "confirmer",
-          cancelButtonText: "annuler",
+          confirmButtonText: "Confirm",
+          cancelButtonText: "Cancel",
           allowOutsideClick: () => !Swal.isLoading(),
         }).then((resp) => {
           if (resp.isConfirmed) {
