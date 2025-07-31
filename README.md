@@ -9,6 +9,17 @@
 
 GoPro is a modern, role-based project management platform built with React, Node.js, and MySQL. It provides a complete solution for managing projects, tasks, and team collaboration with different access levels for administrators, managers, and regular users.
 
+## 📊 Project Presentation
+
+For a detailed overview of the project, including architecture, features, and implementation details, check out our project presentation:
+
+**[📋 View Project Presentation](https://docs.google.com/presentation/d/1RS1VDM9_LYE_W1LrW6nAHuH9c251GQBe/edit?usp=sharing&ouid=105537588207405972480&rtpof=true&sd=true)**
+
+*The presentation covers:*
+- Project architecture and design decisions
+- Technology stack overview
+- Feature demonstrations
+
 ## ✨ Features
 
 ### 🔐 Role-Based Access Control
