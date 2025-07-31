@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# GoPro Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the React frontend application for the GoPro project management platform.
 
-## Available Scripts
+## 🚀 Quick Start
 
-In the project directory, you can run:
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm start`
+### Installation
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Development
+```bash
+npm start
+```
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Build for Production
+```bash
+npm run build
+```
+Builds the app for production to the `build` folder.
 
-### `npm test`
+### Testing
+```bash
+npm test
+```
+Launches the test runner in interactive watch mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏗️ Project Structure
 
-### `npm run build`
+```
+src/
+├── components/
+│   ├── admin/          # Admin-specific components
+│   │   ├── AddUser.js
+│   │   ├── Home.js
+│   │   ├── ProfileAdmin.js
+│   │   ├── UpdateUser.js
+│   │   └── Users.js
+│   ├── gestionnaire/   # Manager-specific components
+│   │   ├── Home.js
+│   │   ├── Projects.js
+│   │   ├── Users.js
+│   │   └── project/    # Project management components
+│   │       ├── AddProject.js
+│   │       ├── AddTask.js
+│   │       ├── Avatars.js
+│   │       ├── ConsultProject.js
+│   │       ├── ConsultTask.js
+│   │       ├── List.js
+│   │       ├── Staff.js
+│   │       └── Tasks.js
+│   ├── user/          # User-specific components
+│   │   ├── Avatars.js
+│   │   ├── ConsultProject.js
+│   │   ├── ConsultTask.js
+│   │   ├── Home.js
+│   │   ├── List.js
+│   │   ├── Projects.js
+│   │   ├── Staff.js
+│   │   └── Tasks.js
+│   └── Profile.js     # Shared profile component
+├── guard/             # Route protection components
+│   ├── ProtectedAdmin.js
+│   ├── ProtectedGest.js
+│   └── ProtectedUser.js
+├── views/             # Main page components
+│   ├── Admin.js
+│   ├── Gestionnaire.js
+│   ├── Login.js
+│   ├── NotFound.js
+│   └── User.js
+├── img/              # Static assets
+├── App.js            # Main application component
+├── App.css           # Main application styles
+├── index.js          # Application entry point
+└── login.css         # Login page styles
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Key Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React 18** - UI framework
+- **Material-UI** - Component library for consistent design
+- **React Router** - Client-side routing
+- **Axios** - HTTP client for API calls
+- **JWT Decode** - Token handling and authentication
+- **SweetAlert2** - Beautiful notifications and alerts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔐 Authentication & Routing
 
-### `npm run eject`
+The application implements role-based routing with protected routes:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Admin Routes**: `/admin/*` - User management and system administration
+- **Manager Routes**: `/gestionnaire/*` - Project and task management
+- **User Routes**: `/user/*` - View assigned projects and tasks
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Each route is protected by middleware that verifies user authentication and role permissions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 UI/UX Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Material Design**: Consistent and modern UI components
+- **Role-Based Interface**: Different layouts and features based on user role
+- **Real-time Notifications**: User-friendly alerts and confirmations
+- **Intuitive Navigation**: Easy-to-use interface for all user types
 
-## Learn More
+## 🔧 Configuration
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The frontend connects to the backend API running on `http://localhost:3001`. Make sure the backend server is running before starting the frontend application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📱 Browser Support
 
-### Code Splitting
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Deployment
 
-### Analyzing the Bundle Size
+1. Build the application:
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Deploy the `build` folder to your web server
 
-### Making a Progressive Web App
+3. Ensure the backend API is accessible from your deployment environment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
 
-### Advanced Configuration
+When contributing to the frontend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Follow the existing code structure and naming conventions
+2. Use Material-UI components for consistency
+3. Implement proper error handling for API calls
+4. Add appropriate loading states for better UX
+5. Test on different screen sizes for responsiveness
 
-### Deployment
+## 📝 Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The application uses JWT tokens stored in localStorage for authentication
+- API calls are made to the backend server running on port 3001
+- All components are designed to be responsive and accessible
+- Error boundaries and loading states are implemented for better user experience
