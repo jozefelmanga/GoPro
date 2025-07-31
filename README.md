@@ -1,7 +1,7 @@
 # GoPro - Project Management Platform
 
 <div align="center">
-  <img src="client/public/logo192.png" alt="GoPro Logo" width="120" height="120">
+  <img src="client/src/img/gopro.png" alt="GoPro Logo" width="120" height="120">
   <h3>A comprehensive full-stack project management solution</h3>
 </div>
 
